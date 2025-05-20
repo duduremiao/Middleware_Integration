@@ -82,7 +82,7 @@ Responsável pela integração entre os serviços.
 - **Dependency Injection**: Injeção de dependências via construtor
 - **MVC Pattern**: Separação clara entre Model, View e Controller
 - **Enterprise Integration Patterns**: Implementados via Apache Camel
-- **Façade Pattern**: Middleware como fachada para simplificar a integração
+- **Facade Pattern**: Middleware como fachada para simplificar a integração
 
 ## 🧪 Tipos de Testes
 
