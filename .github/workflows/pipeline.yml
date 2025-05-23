@@ -1,0 +1,39 @@
+#Crie um pipeline para uma aplicação Java 17 em GitHub Actions
+
+name: Java CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Build with Gradle
+        run: ./gradlew build
+
+      - name: Run tests
+        run: ./gradlew test
+
+     # publish in a way like --no-restore --no-build- output ./publish that i do not need credentials
+      - name: Publish
+        run: ./gradlew publish --no-restore --no-build --output ./publish
+
+     #inclua um upload do artefato
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
