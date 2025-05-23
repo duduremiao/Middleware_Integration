@@ -1,5 +1,6 @@
 # Sistema de Microserviços de Clientes e Pedidos
 
+[![Java CI](https://github.com/duduremiao/Middleware_Integration/actions/workflows/pipeline.yml/badge.svg)](https://github.com/duduremiao/Middleware_Integration/actions/workflows/pipeline.yml)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3.6-brightgreen)
 ![Java](https://img.shields.io/badge/Java-17-orange)
 ![Apache Camel](https://img.shields.io/badge/Apache%20Camel-4.8.1-red)
